@@ -1,0 +1,6 @@
+lib
+es
+.nitr0gen.profile
+nitr0gen-firebase*
+/node_modules
+.env
