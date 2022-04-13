@@ -1,6 +1,5 @@
 lib
 es
-.nitr0gen.profile
-nitr0gen-firebase*
+.summit.profile
 /node_modules
 .env

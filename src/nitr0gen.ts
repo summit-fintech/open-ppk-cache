@@ -95,7 +95,7 @@ export class Nitr0genService {
     try {
       return (
         await ActiveRequest.send(
-          `${process.env.SERVERURL}/wallet`,
+          `${process.env.SERVERURL}/wallet/cache`,
           "POST",
           [`x-api-uuid: ${uuid}`],
           {
@@ -130,11 +130,11 @@ export class Nitr0genService {
     try {
       return (
         await ActiveRequest.send(
-          `${process.env.SERVERURL}/wallet/diffconsensus`,
+          `${process.env.SERVERURL}/wallet/cache/diffconsensus`,
           "POST",
           [`x-api-uuid: ${uuid}`],
           {
-            ntx,
+            notaTx:ntx,
           }
         )
       ).data;
@@ -168,7 +168,6 @@ export class Nitr0genService {
           {
             otpk,
             ntx,
-            pnt: null,
           }
         )
       ).data;

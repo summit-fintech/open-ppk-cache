@@ -18,7 +18,7 @@ dotenv.config();
 
 // Local runtime cache of keys
 const profilePath = `${process.cwd()}/${
-  process.env.profile || ".nitr0gen.profile"
+  process.env.profile || ".summit.profile"
 }`;
 
 // Create this many keys per run (*2 for live networks)
@@ -126,6 +126,7 @@ async function create() {
     otk.uuid
   )) as any;
 
+  result.nId = result.notaId;
   if (result.nId) {
     otk.identity = result.nId;
 
